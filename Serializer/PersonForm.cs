@@ -93,5 +93,16 @@ namespace Serializer
             serialNum = serialNum - 1;
             RefreshForm();
         }
+
+        private void FirstButton_Click(object sender, EventArgs e)
+        {
+            serialNum = 1;
+            RefreshForm();
+        }
+
+        private void LastButton_Click(object sender, EventArgs e)
+        {
+            getLastData();
+        }
     }
 }

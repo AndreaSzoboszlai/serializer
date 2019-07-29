@@ -37,6 +37,8 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.phoneLabel = new System.Windows.Forms.Label();
+            this.firstButton = new System.Windows.Forms.Button();
+            this.lastButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameBox
@@ -129,11 +131,37 @@
             this.phoneLabel.TabIndex = 8;
             this.phoneLabel.Text = "Phone: ";
             // 
+            // firstButton
+            // 
+            this.firstButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.firstButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.firstButton.Location = new System.Drawing.Point(39, 366);
+            this.firstButton.Name = "firstButton";
+            this.firstButton.Size = new System.Drawing.Size(190, 32);
+            this.firstButton.TabIndex = 9;
+            this.firstButton.Text = "Jump to first";
+            this.firstButton.UseVisualStyleBackColor = true;
+            this.firstButton.Click += new System.EventHandler(this.FirstButton_Click);
+            // 
+            // lastButton
+            // 
+            this.lastButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.lastButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lastButton.Location = new System.Drawing.Point(267, 366);
+            this.lastButton.Name = "lastButton";
+            this.lastButton.Size = new System.Drawing.Size(190, 32);
+            this.lastButton.TabIndex = 10;
+            this.lastButton.Text = "Jump to last";
+            this.lastButton.UseVisualStyleBackColor = true;
+            this.lastButton.Click += new System.EventHandler(this.LastButton_Click);
+            // 
             // personsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 384);
+            this.ClientSize = new System.Drawing.Size(496, 421);
+            this.Controls.Add(this.lastButton);
+            this.Controls.Add(this.firstButton);
             this.Controls.Add(this.phoneLabel);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.nameLabel);
@@ -162,6 +190,8 @@
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Button firstButton;
+        private System.Windows.Forms.Button lastButton;
     }
 }
 
