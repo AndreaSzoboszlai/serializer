@@ -24,17 +24,24 @@ namespace Serializer
 
         private void PersonsForm_Load(object sender, EventArgs e)
         {
-            RefreshForm();
+                RefreshForm();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(nameBox.Text) && !string.IsNullOrWhiteSpace(addressBox.Text) && !string.IsNullOrWhiteSpace(phoneBox.Text))
             {
-                serialNum += 1;
-                person = new Person(nameBox.Text, addressBox.Text, phoneBox.Text, serialNum);
-                person.Serialize();
-                MessageBox.Show("Person saved.");
+                if (serialNum < 99)
+                {
+                    serialNum += 1;
+                    person = new Person(nameBox.Text, addressBox.Text, phoneBox.Text, serialNum);
+                    person.Serialize();
+                    MessageBox.Show("Person saved.");
+                }
+                else
+                {
+                    MessageBox.Show("This program can only serialize 99 people.");
+                }
             }
             else if (string.IsNullOrWhiteSpace(nameBox.Text))
             {
