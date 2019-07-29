@@ -172,7 +172,8 @@
             this.Controls.Add(this.addressBox);
             this.Controls.Add(this.nameBox);
             this.Name = "personsForm";
-            this.Text = "Persons";
+            this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.Text = "Person Serializer";
             this.Load += new System.EventHandler(this.PersonsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
